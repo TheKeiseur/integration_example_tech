@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px (la formule est 10/16*100) la taille par défaut étant 16px */
+}
+
+body {
+  font-size: 1.5rem;
+  /* on remets la taille du texte par défaut pour le body à 16px en utilisant les rem comme unité) */
+  background-color: #eee;
+  color: #555;
+  line-height: 2rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  transition: all 0.5s;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  text-align: left;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+section h2::after,
+section h3::after,
+section h4::after {
+  content: "";
+  height: 24px;
+  flex: 1;
+  margin-left: 1em;
+  background-image: radial-gradient(#999 3px, transparent 4px);
+  background-size: 24px 24px;
+}
+
+/* *****************************************************************
+Header
+***************************************************************** */
+header {
+  background-image: url(../ressources/images/header.jpg);
+  background-color: #0c6588;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+header .bg-color {
+  background-color: #e2f7ff;
+}
+
+.site-title {
+  font-size: 3.6rem;
+}
+
+.logo {
+  padding-top: 2rem;
+}
+
+.logo>img {
+  width: 7rem;
+  height: 7rem;
+  padding-bottom: 1.5rem;
+}
+
+.search {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+}
+
+header figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+header figure p {
+  margin: 0;
+}
+
+figure i {
+  font-size: 4rem;
+}
+
+header figure div+div {
+  padding-left: 3rem;
+}
+
+header .row>div {
+  padding: 1rem;
+}
+
+header a {
+  color: #2896c2;
+}
+
+/* *****************************************************************
+MAIN
+***************************************************************** */
+main {
+  background-color: #fff;
+}
+
+section {
+  padding-top: 5rem;
+}
+
+.tags ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.tags li {
+  padding: 0.5rem 1.5rem;
+}
+
+main figure {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+figure .slider {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.preview {
+  width: 10%;
+}
+
+.buy {
+  background-color: #eee;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.price-infos {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-around;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.price {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
+.add-to-cart {
+  max-width: 40%;
+}
+
+.blue button {
+  font-size: 2rem;
+  padding: 2rem 2rem;
+  margin: 0;
+  border: 0;
+  color: #fff;
+  background-color: teal;
+  width: 100%;
+}
+
+.white {
+  background-color: #fff;
+  padding: 1rem 2rem;
+}
+
+.guarantee {
+  background-color: #acacac;
+  padding: 2rem;
+}
+
+.guarantee p {
+  margin: 0;
+}
+
+.content {
+  padding: 2rem 0;
+}
+
+.content-picture {
+  border: 1px solid grey;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* *****************************************************************
+MEDIA QUERIES
+***************************************************************** */
+@media screen and (min-width: 480px) {
+  .logo {
+    width: 40%;
+  }
+
+  .search {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header figure {
+    width: 40%;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  main .wrap-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 2rem;
+  }
+
+  .wrap-flex .pictures {
+    max-width: 48%;
+    margin: 0;
+    padding-top: 0;
+  }
+
+  .wrap-flex .resume {
+    max-width: 48%;
+    margin: 0;
+  }
+
+  .content>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .content-picture {
+    order: 2;
+    width: 48%;
+  }
+
+  .content-texte {
+    order: 1;
+    width: 48%;
+  }
+
+  .content-picture-reverse {
+    order: 1;
+    width: 48%;
+  }
+
+  .content-texte-reverse {
+    order: 2;
+    width: 48%;
+  }
+}
